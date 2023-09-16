@@ -55,7 +55,7 @@ func main() {
 			continue
 		}
 
-		_, err = file.Write([]byte(fmt.Sprintf("CEP %s: %s | %s, %s | DDD: %s\n", data.Cep, data.Logradouro, data.Localidade, data.Uf, data.Ddd)))
+		_, err = file.Write([]byte(fmt.Sprintf("CEP %s: %s, %s | %s, %s | DDD: %s\n", data.Cep, data.Logradouro, data.Bairro, data.Localidade, data.Uf, data.Ddd)))
 		if err != nil {
 			fmt.Println(err)
 			continue
